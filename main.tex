@@ -25,8 +25,6 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\singlespacing
-
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
@@ -53,6 +51,12 @@
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemBolded}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-5pt}}
   }
 }
 
@@ -88,9 +92,9 @@
 
 \newcommand{\resumeSubSubheadingMultiteam}[4]{
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2, #3} \\
+      \textit{\small#1}{ \scriptsize #4} & \textit{\small #2, #3} \\
     \end{tabular*}
-    {\scriptsize #4}
+    
     \vspace{-10pt}
 }
 
@@ -133,7 +137,8 @@
 
   \resumeSubSubheadingMultiteam
    {Google Pub/Sub}{New York, NY}{May 2022 -- Present}
-   {Google’s scalable and reliable publish-subscribe-messaging service that enables asynchronous communication between applications with a guarantee of no message loss. Google Pub/Sub is the internal messaging service that serves as the backend for Cloud Pub/Sub.}
+   % {Google’s scalable and reliable publish-subscribe-messaging service that enables asynchronous communication between applications with a guarantee of no message loss. Google Pub/Sub }
+   { is the internal messaging service that also serves as Cloud Pub/Sub backend.}
 
       \resumeItemListStart
 \resumeItem{Led critical infrastructure improvements for exactly-once delivery, eliminating message duplication for subscriptions with previous seek requests.}
@@ -146,8 +151,9 @@
 
 
   \resumeSubSubheadingMultiteam
-   {Marconi SPGW}{New York, NY}{Jan 2019 -- May 2022}
-   {SPGW serves as the control plane functionality supporting data connections and Voice (VoLTE, VoWifi, Vo4G), programming the dataplane with instructions for processing user plane packets.}
+   {Marconi SPGW}{Mountain View, CA}{Jan 2019 -- May 2022}
+   {serves as the control plane functionality supporting data connections}
+   %{ and Voice (VoLTE, VoWifi, Vo4G), programming the dataplane with instructions for processing user plane packets.}
 
       \resumeItemListStart
 \resumeItem{Led architecture and implementation of voice charging data records \(CDR\) export pipeline for single and multi-bear scenarios, achieving 50\% storage optimization while maintaining regulatory compliance.}
@@ -159,11 +165,9 @@
       \resumeItemListEnd
 
   \resumeSubSubheadingMultiteam
-   {Google Health Pathology (20\% Project)}{Palo Alto, CA}{Jun -- Aug 2020}
-   {Path team relies on multiple Slim-base ML models to diagnose cancer, and rate its severity based on the tissue image data.}
-
+   {Google Health Pathology (20\% Project)}{Palo Alto, CA}{Jun -- Aug 2020}{}
       \resumeItemListStart
-\resumeItem{Integrated slim ResNet ML models into cancer diagnosis pipeline using Tensorflow, implementing end-to-end testing and performance benchmarking with ResNet implemented with Keras.}
+\resumeItem{Integrated slim ResNet ML models into cancer diagnosis pipeline using Tensorflow, implementing end-to-end testing and performance benchmarking against ResNet implemented with Keras.}
       \resumeItemListEnd
 
 
@@ -218,22 +222,13 @@
 %--------SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: C++, Python, Ruby on Rails, Java, JavaScript, SQL, HTML/CSS, Linux/Unix command lines}
-    }
-    \item{
-      \textbf{Expertise}{: 9 years of experience in software development}
-      \begin{itemize}
-        \item{Distributed systems, real-time data processing, and networking infrastructure. Strong focus on reliability, scalability, and performance optimization.}
-        \item{2 years of industry and research experience in ML/AI algorithms}
+  \resumeItemBolded{Languages}{C++, Python, Ruby on Rails, Java, JavaScript, SQL, HTML/CSS, Linux/Unix command lines}
+  \resumeItemBolded{Expertise}{9 years of experience in software development \vspace{-10pt}
+  \begin{itemize}
+        \item{\small{Distributed systems, real-time data processing, and networking infrastructure. Strong focus on reliability, scalability, and performance optimization. \vspace{-2pt}}}
+        \item{\small{2 years of industry and research experience in ML/AI algorithms \vspace{-2pt}}}
       \end{itemize}
     }
-
-
-9 years of experience in software development
-Expert in distributed systems, real-time data processing, and networking infrastructure. Strong focus on reliability, scalability, and performance optimization.
-2 years of industry and research experience in ML/AI algorithms
-
   \resumeSubHeadingListEnd
 
 
@@ -241,10 +236,10 @@ Expert in distributed systems, real-time data processing, and networking infrast
 %--------ACTIVITIES------------
 \section{Activities}
   \resumeSubHeadingListStart
-    \item{\textbf{Google Technical Interviewer}{, Jul 2019 -- present}}
-    \item{\textbf{Microsoft TEALS Program Instructor}{, Millennium High School, New York, NY, Sep 2024 -- present: Teaching Introduction to Computer Science to a class of 23 high school students.}}
-    \item{\textbf{Technical Mentor for Google CorpEng High School Tech Apprentice Program}{Mountain View, CA, Jan 2019: Mentoring students with their projects in DialogFlow and JavaScript.}}
-    \item{\textbf{FIRST Tech Challenge Robotics Team Mentor}{Waldorf School of the Peninsula, Mountain View, CA, Oct 2017 -- Feb 2018: Mentored high school students in Waldorf School Robotic club to build a robot controller to compete in FIRST Tech Challenge robot competition in Java.}}
+    \resumeItemBolded{Google Technical Interviewer}{Jul 2019 -- present}
+    \resumeItemBolded{Microsoft TEALS Program Instructor}{Millennium High School, New York, NY, Sep 2024 -- present: Teaching Introduction to Computer Science to a class of 23 high school students.}
+    \resumeItemBolded{Technical Mentor for Google CorpEng High School Tech Apprentice Program}{Mountain View, CA, Jan 2019: Mentoring students with their projects in DialogFlow and JavaScript.}
+    \resumeItemBolded{FIRST Tech Challenge Robotics Team Mentor}{Waldorf School of the Peninsula, Mountain View, CA, Oct 2017 -- Feb 2018: Mentored high school students in Waldorf School Robotic club to build a robot controller to compete in FIRST Tech Challenge robot competition in Java.}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
