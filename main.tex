@@ -14,7 +14,6 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-%\usepackage{fontawesome}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{setspace}
@@ -63,14 +62,14 @@
 
 \newcommand{\resumeItemBoldedTwo}[2]{
   \item\small{
-    \textbf{#1}{, \textit{#2}\vspace{-8pt}}
+    \textbf{#1}{, \textit{#2}\vspace{-5pt}}
   }
 }
 
 
 \newcommand{\resumeItemBoldedFour}[4]{
   \item\small{
-    \textbf{#1}{, #2, \textit{#3}: #4 \vspace{-8pt}}
+    \textbf{#1}{, #2, \textit{#3}: #4 \vspace{-5pt}}
   }
 }
 
@@ -127,19 +126,25 @@
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\singlespacing
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://whoisnavi.com/}{\Large Navi Tansaraviput}} & Email: \href{mailto:navi@alum.mit.edu}{navi@alum.mit.edu}\\
-  Github: \href{https://github.com/nvtnsrvp}{nvtnsrvp}\quad\quad LinkedIn: \href{https://linkedin.com/in/navitan}{navitan}\quad\quad U.S. Permanent Resident (Green Card) & Mobile: \href{tel:+16176788179}{(+1)617-678-8179} \\
+  \textbf{\href{https://nvtsrvp.com/}{\Large Navi Tansaraviput}} & Email: \href{mailto:navi@alum.mit.edu}{navi@alum.mit.edu}\\
+ 
+Github: \href{https://github.com/nvtsrvp}{nvtsrvp}\quad LinkedIn: \href{https://linkedin.com/in/nvtsrvp}{nvtsrvp}\quad U.S. Permanent Resident (Green Card) & Mobile: \href{tel:+16176788179}{(+1)617-678-8179} \\
 
 
   %Mobile: \href{tel:+16176788179}{(+1)617-678-8179}  Email: \href{mailto:navi@alum.mit.edu}{navi@alum.mit.edu} Github: \href{https://github.com/nvtnsrvp}{nvtnsrvp} LinkedIn: \href{https://linkedin.com/in/navitan}{navitan} U.S. Permanent Resident (Green Card) \\
   % \faEnvelope[regular] \href{mailto:navi@alum.mit.edu}{navi@alum.mit.edu} \quad \faMobile \href{tel:+16176788179}{(+1)617-678-8179} \\
 \end{tabular*}
-\vspace{-10pt}
+\vspace{-5pt}
+
+\small{ 
+  \textit{Software engineer with 9 years of experience, including 7 years in distributed systems, real-time data processing, and networking infrastructure, plus 2 years of industry and research work in ML/AI algorithms. Strong focus on reliability, scalability, and performance optimization.}
+}
+\vspace{-5pt}
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -163,7 +168,7 @@
 
       \resumeItemListStart
 \resumeItem{Led critical infrastructure improvements for exactly-once delivery, eliminating message duplication for subscriptions with previous seek requests.}
-\resumeItem{Designed and implemented auto-sharding integration for subscriber statistics requests, achieving 80\% improved request affinity and 60\% memory reduction. Drove multiple improvements to backlog stats staleness detection and resolution.}
+\resumeItem{Designed and implemented auto-sharding integration for subscriber statistics requests, achieving 5x improved request affinity and 60\% memory reduction. Drove multiple improvements to backlog stats staleness detection and resolution.}
 \resumeItem{Led and supervised the the public rollout of data residency compliance initiative to ensure that customer data is stored and processed 
 within the allowed regions, enabling services for customers with highly regulated workloads (EU, KSA). 
 Landed Regional Endpoints for EU data residency compliance and 
@@ -176,17 +181,17 @@ while serving as the point of contact for cross-team partners.}
 
   \resumeSubSubheadingMultiteam
    {Marconi SPGW}{Mountain View, CA}{Jan 2019 -- May 2022}
-   {serves as the control plane functionality supporting data connections}
+   {serves as the control plane functionality supporting data connections.}
    %{ and Voice (VoLTE, VoWifi, Vo4G), programming the dataplane with instructions for processing user plane packets.}
 
       \resumeItemListStart
 \resumeItem{Architected voice charging data records pipeline for single and multi-bear scenarios, achieving 50\% storage optimization while maintaining regulatory compliance.}
-\resumeItem{Designed and implemented weighted load-balancing system for SBC servers, percentage-based IMSI-block IMS traffic redirection, and Vo4G Agent using Peregrine to support Vo4G when devices do not have VoLTE stack.}
+\resumeItem{Designed and implemented weighted load-balancing system for SBC servers, percentage-based voice traffic redirection, and Vo4G Agent using Peregrine to support Vo4G when devices do not have VoLTE stack.}
 \resumeItem{Designed real-time voice quality metrics system with dataplane sampling, improving issue detection and evaluation.} % (loss, discard, MOS) 
-\resumeItem{Led Icmpv6 service framework migration from asynchronous to synchronous architecture, improving observability and reducing customer issues by 20\%}
+\resumeItem{Led Icmpv6 service framework migration from asynchronous to synchronous architecture, improving observability and reducing customer issues by 20\%.}
 %Designed and implemented asynchronous to synchronous framework migration for Icmpv6 service, eliminating deprecated queue-based communication dependencies and improving observability, resulting in 20\% reduction in customer issues.
-\resumeItem{Implemented critical VoLTE, VoWiFi, and Vo4G functionality, including handover flows, GTP interfaces, }
-\resumeItem{Led PGW operational improvements initiative, implementing enhanced anomaly detection and experiment configuration management enabling rack-specific rollouts.}
+\resumeItem{Implemented critical VoLTE, VoWiFi, and Vo4G functionality, including handover flows, GTP interfaces.}
+\resumeItem{Led operational improvements initiative, implementing enhanced anomaly detection and experiment configuration management enabling rack-specific rollouts.}
       \resumeItemListEnd
 
   \resumeSubSubheadingMultiteam
@@ -225,7 +230,7 @@ while serving as the point of contact for cross-team partners.}
       {Redwood Shores, CA}{June -- Aug 2014}
       \resumeItemListStart
         \resumeItem{Implemented automated version control presubmit verification for kernel developers to improve commit consistency and correctness in Python.}
-        \resumeItem{Worked on Oracle linux infrastructure in C++}
+        \resumeItem{Resolved clock synchonization issue on Oracle linux infrastructure in C++.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -247,16 +252,8 @@ while serving as the point of contact for cross-team partners.}
 %--------SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-  \resumeItemBoldedColon{Languages}{C++, Python, Ruby on Rails, Java, JavaScript, SQL, HTML/CSS, Linux/Unix command lines}
-  \resumeItemBoldedColon{Expertise}{9 years of experience in software development \vspace{-10pt}
-  \begin{itemize}
-        \item{\small{Distributed systems, real-time data processing, and networking infrastructure. Strong focus on reliability, scalability, and performance optimization. \vspace{-5pt}}}
-        \item{\small{2 years of industry and research experience in ML/AI algorithms \vspace{-5pt}}}
-      \end{itemize}
-    }
+  \resumeItemBoldedColon{Languages}{C++20, Python3, Ruby on Rails, Java, Shell Scripting (bash, zsh), SQL, JavaScript, HTML, CSS}
   \resumeSubHeadingListEnd
-
-
 
 %--------ACTIVITIES------------
 \section{Activities}
