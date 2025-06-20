@@ -18,6 +18,9 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{setspace}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\justifying
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -30,7 +33,7 @@
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.2in}
+\addtolength{\textwidth}{1.1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
@@ -134,21 +137,26 @@
 
 %----------HEADING-----------------
 
-\begin{tabular*}{\textwidth}{p{0.65\linewidth}p{0.35\linewidth}}
+\begin{tabular*}{\textwidth}{p{0.7\linewidth}p{0.3\linewidth}}
 \textbf{\href{https://nvtsrvp.com/}{\huge Navi Tansaraviput}}
 & \multicolumn{1}{r}{
-{ Mobile: \href{tel:+16176788179}{(+1) 617-678-8179}}}\\
+% Mobile: \href{tel:+10000000000}{(+1)000-000-0000} \\
+{\raisebox{0.0\height}{\footnotesize \faPhone\ \href{tel:+10000000000}{(+1) 000-000-0000}}}
+}\\
 \multirow{3}{\linewidth}{\scriptsize
 Software engineer with 9 years of experience, including 7 years in distributed systems, real-time data processing, and networking infrastructure, plus 2 years of industry and research work in ML and AI. Strong focus on reliability, scalability, and performance optimization.
 }
 & \multicolumn{1}{r}{
-{ Email: \href{mailto:navi@alum.mit.edu}{navi@alum.mit.edu}}} \\
+{\raisebox{0.0\height}{\footnotesize \faEnvelope\ \href{mailto:navi@alum.mit.edu}{navi@alum.mit.edu}}}
+} \\
 & \multicolumn{1}{r}{
 % Github: \href{https://github.com/nvtsrvp}{nvtsrvp}
 % LinkedIn: \href{https://linkedin.com/in/nvtsrvp}{nvtsrvp} 
-{ Github, LinkedIn: \href{https://github.com/nvtsrvp}{nvtsrvp}}} \\
+{\raisebox{0.0\height}{\footnotesize \faGithub\ \faLinkedin\ \href{https://github.com/nvtsrvp}{nvtsrvp}}}
+} \\
 & \multicolumn{1}{r}{
-{ {U.S. Permanent Resident (Green Card)}}} \\
+{\raisebox{0.0\height}{\footnotesize \faGlobe\ {U.S. Permanent Resident (Green Card)}}} 
+}\\
 \end{tabular*}
 \vspace{-10pt}
 
@@ -248,7 +256,7 @@ Led the in-transit \href{https://cloud.google.com/pubsub/docs/resource-location-
     \resumeSubheading
       {Akamai Technology, Inc.}{Engineering Intern}{Platform Operation}{Cambridge, MA}{June -- Aug 2012}
       \resumeItemListStart
-        \resumeItem{Built an analytic visualization web application to process and display log messages using HTML,CSS,JS with Python,PostgreSQL backend.}
+        \resumeItem{Developed web app for log analysis and visualization using HTML/CSS/JS frontend and Python/PostgreSQL backend.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -271,3 +279,4 @@ Led the in-transit \href{https://cloud.google.com/pubsub/docs/resource-location-
 
 %-------------------------------------------
 \end{document}
+

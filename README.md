@@ -8,8 +8,6 @@ A more compact version of [sb2nov/resume](https://github.com/sb2nov/resume).
 pdflatex main.tex
 ```
 
-## FontAwesome Preview
+![Resume Screenshot](/examples/main.jpg)
 
-I compiled `awesome.tex` on Overleaf to bypass issues with fontawesome imports on xelatex on my older OS setup, and to avoid spacing problems between xelatex and pdflatex.
-
-![Resume Screenshot](/examples/awesome.jpg)
+If you are on macOS 12 or older, you can compile it on Overleaf to bypass issues with FontAwesome imports on XeLaTeX on older OS setups. Otherwise, if you want a version without FontAwesome, use `backward.tex`.
