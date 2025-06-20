@@ -19,6 +19,8 @@
 \usepackage{tabularx}
 \usepackage{setspace}
 \usepackage{fontawesome5}
+\usepackage{ragged2e}
+\justifying
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -31,7 +33,7 @@
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.2in}
+\addtolength{\textwidth}{1.1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
@@ -124,7 +126,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -176,19 +178,18 @@ Software engineer with 9 years of experience, including 7 years in distributed s
   \resumeSubSubheadingMultiteam
    {Google Pub/Sub}{New York, NY}{May 2022 -- Present}
    % {Google’s scalable and reliable publish-subscribe-messaging service that enables asynchronous communication between applications with a guarantee of no message loss. Google Pub/Sub }
-   {is the internal messaging service that also serves as Cloud Pub/Sub backend.}
+   {is the internal messaging service that also serves as \href{https://cloud.google.com/pubsub}{Cloud Pub/Sub backend}.}
 
       \resumeItemListStart
-\resumeItem{Led critical infrastructure improvements for exactly-once delivery, eliminating message duplication for subscriptions with previous seek requests.}
+\resumeItem{Led critical infrastructure improvements for \href{https://cloud.google.com/pubsub/docs/exactly-once-delivery}{exactly-once delivery}, eliminating message duplication for subscriptions with previous seek requests.}
+
+\resumeItem{
+Led the in-transit \href{https://cloud.google.com/pubsub/docs/resource-location-restriction}{data residency compliance initiative} and regional endpoint service deployment to meet Personal Data Protection Law requirements, serving as the key cross-functional point of contact; designed the solution and a standardized framework, enabling new market segments while reducing future engineering effort by 75\%.}
+
 \resumeItem{Designed and implemented auto-sharding integration for subscriber statistics requests, achieving 5x improved request affinity and 60\% memory reduction. Drove multiple improvements to backlog stats staleness detection and resolution.}
-\resumeItem{Led and supervised the the public rollout of data residency compliance initiative to ensure that customer data is stored and processed 
-within the allowed regions, enabling services for customers with highly regulated workloads (EU, KSA). 
-Landed Regional Endpoints for EU data residency compliance and 
-designed a standardized deployment framework that reduced future engineering effort by 75\%, 
-while serving as the point of contact for cross-team partners.}
-\resumeItem{Launched multiple services supporting various new features, including: Kinesis Ingestion to Cloud Pub/Sub, a separate forwarder service for Cloud Pub/Sub Cross Region Replication to enhance its resilience against regional outage.}
+% \resumeItem{Designed and led the deployment of services supporting: \href{https://cloud.google.com/pubsub/docs/samples/pubsub-create-topic-with-kinesis-ingestion}{Kinesis Ingestion to Cloud Pub/Sub}, and a separate forwarder service for Cloud Pub/Sub Cross Region Replication to enhance resilience against regional outages.}
 \resumeItem{Extended Checksum to Pub/Sub Storage, eliminating permanent data corruption. Resolved critical customer issues and improved data integrity.}
-\resumeItem{Mentored STEP interns and guided technical implementations for Cloud Pub/Sub to BigQuery integration with BigQuery table schema and Avro logical types schema support.}
+\resumeItem{Mentored STEP interns and guided technical implementations for \href{https://cloud.google.com/pubsub/docs/bigquery}{Cloud Pub/Sub to BigQuery integration} with BigQuery table schema and Avro logical types schema support.}
       \resumeItemListEnd
 
   \resumeSubSubheadingMultiteam
@@ -198,12 +199,12 @@ while serving as the point of contact for cross-team partners.}
 
       \resumeItemListStart
 \resumeItem{Architected voice charging data records pipeline for single and multi-bear scenarios, achieving 50\% storage optimization while maintaining regulatory compliance.}
-\resumeItem{Designed and implemented weighted load-balancing system for SBC servers, percentage-based voice traffic redirection, and Vo4G Agent using Peregrine to support Vo4G when devices do not have VoLTE stack.}
+% \resumeItem{Designed and implemented weighted load-balancing system for SBC servers, percentage-based voice traffic redirection, and Vo4G Agent using Peregrine to support Vo4G when devices do not have VoLTE stack.}
 \resumeItem{Designed real-time voice quality metrics system with dataplane sampling, improving issue detection and evaluation.} % (loss, discard, MOS) 
 \resumeItem{Led Icmpv6 service framework migration from asynchronous to synchronous architecture, improving observability and reducing customer issues by 20\%.}
 %Designed and implemented asynchronous to synchronous framework migration for Icmpv6 service, eliminating deprecated queue-based communication dependencies and improving observability, resulting in 20\% reduction in customer issues.
-\resumeItem{Implemented critical VoLTE, VoWiFi, and Vo4G functionality, including handover flows, GTP interfaces.}
-\resumeItem{Led operational improvements initiative, implementing enhanced anomaly detection and experiment configuration management enabling rack-specific rollouts.}
+% \resumeItem{Implemented critical VoLTE, VoWiFi, and Vo4G functionality, including handover flows, GTP interfaces.}
+\resumeItem{Led operational improvements initiative: automated candidate anomaly detection, reducing 30\% of weekly engineering effort, and designed experiment configuration management enabling rack-specific rollouts; created standardized procedures and knowledge-shared enabling platform-wide process improvements.}
       \resumeItemListEnd
 
   \resumeSubSubheadingMultiteam
@@ -227,54 +228,55 @@ while serving as the point of contact for cross-team partners.}
       {MIT EAPS Signals and Systems Group}{Research Assistant}{SLOOP}
       {Cambridge, MA}{June 2015 -- Aug 2016}
       \resumeItemListStart
-        \resumeItem{Developed relevance feedback algorithms, and automatic image recognition architecture for SLOOP, a crowd-sourced image retrieval engine for animal biometrics in Matlab and Python under the supervision of Dr. Srinivas Ravela.}
+        \resumeItem{
+        % Developed relevance feedback algorithms, and automatic image recognition architecture for a crowd-sourced image retrieval engine for animal biometrics
+        Developed image recognition algorithms for SLOOP, a crowd-sourced animal biometrics retrieval system
+        }
+        % in Matlab and Python under the supervision of Dr. Srinivas Ravela.
       \resumeItemListEnd
 
     \resumeSubheading
       {MIT CSAIL}{Undergraduate researcher}{Assistive Devices for Healthcare}
       {Cambridge, MA}{Sep 2014 -- June 2015}
       \resumeItemListStart
-        \resumeItem{Analyzed the data that had been collected from the non-invasive monitoring sensors (FSR/Emfit/Accelerometers) deployed on patients’ wheelchairs using wavelet analysis and developed algorithms for heart rate and respiration rate estimations, and breathing suspension detection.}
+        \resumeItem{
+        Developed algorithm for non-invasive vital signs monitoring and breathing anomaly detection.
+        % Analyzed the data that had been collected from the non-invasive monitoring sensors (FSR/Emfit/Accelerometers) deployed on patients’ wheelchairs using wavelet analysis and developed algorithms for heart rate and respiration rate estimations, and breathing suspension detection.
+        }
       \resumeItemListEnd
 
     \resumeSubheading
       {Oracle America, Inc.}{Software Engineering Intern}{Oracle Linux}
       {Redwood Shores, CA}{June -- Aug 2014}
       \resumeItemListStart
-        \resumeItem{Implemented automated version control presubmit verification for kernel developers to improve commit consistency and correctness in Python.}
-        \resumeItem{Co-implemented the fix for a clock synchronization issue in Oracle linux in C++.}
+        \resumeItem{Automated presubmit checks for kernel development version control}
+      %   \resumeItem{Co-implemented the fix for a clock synchronization issue in Oracle linux in C++.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Akamai Technology, Inc.}{Engineering Intern}{Platform Operation}{Cambridge, MA}{June -- Aug 2012}
       \resumeItemListStart
-        \resumeItem{Built an analytic visualization web application to process and display log messages using HTML,CSS,JS with Python,PostgreSQL backend.}
+        \resumeItem{Developed web app for log analysis and visualization using HTML/CSS/JS frontend and Python/PostgreSQL backend.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-
-%-----------AWARD-----------------
-\section{Awards}
-  \resumeSubHeadingListStart
-    \resumeItemBoldedColon{Analog Devices Undergraduate Research and Innovation Scholar}
-      {Sep 2014 - June 2015}
-  \resumeSubHeadingListEnd
-
 %--------SKILLS------------
-\section{Skills}
+\section{Skills \& Activities}
   \resumeSubHeadingListStart
   \resumeItemBoldedColon{Languages}{C++20, Python3, Shell Scripting (bash, zsh), SQL, Ruby on Rails, Java, JavaScript/Typescript, HTML, CSS}
+    \resumeItemBoldedFour{Microsoft TEALS Program Instructor}{Millennium High School, New York, NY}{Sep 2024 -- Present}{Teaching Introduction to Computer Science to a class of 23 high school students.}
   \resumeSubHeadingListEnd
 
 %--------ACTIVITIES------------
-\section{Activities}
-  \resumeSubHeadingListStart
-    \resumeItemBoldedTwo{Google Technical Interviewer}{Jul 2019 -- Present}
-    \resumeItemBoldedFour{Microsoft TEALS Program Instructor}{Millennium High School, New York, NY}{Sep 2024 -- Present}{Teaching Introduction to Computer Science to a class of 23 high school students.}
-    \resumeItemBoldedFour{Technical Mentor for Google CorpEng High School Tech Apprentice Program}{Mountain View, CA}{Jan 2019}{Mentored students with their DialogFlow and Typescript projects.}
-    \resumeItemBoldedFour{FIRST Tech Challenge Robotics Team Mentor}{Waldorf School of the Peninsula, Mountain View, CA}{Oct 2017 -- Feb 2018}{Mentored high school students in the robotic club to build a robot controller to compete in FIRST Tech Challenge robot competition in Java.}
-  \resumeSubHeadingListEnd
+% \section{Activities}
+%   \resumeSubHeadingListStart
+    % \resumeItemBoldedTwo{Google Technical Interviewer}{Jul 2019 -- Present}
+    % \resumeItemBoldedFour{Microsoft TEALS Program Instructor}{Millennium High School, New York, NY}{Sep 2024 -- Present}{Teaching Introduction to Computer Science to a class of 23 high school students.}
+    % \resumeItemBoldedFour{Technical Mentor for Google CorpEng High School Tech Apprentice Program}{Mountain View, CA}{Jan 2019}{Mentored students with their DialogFlow and Typescript projects.}
+    % \resumeItemBoldedFour{FIRST Tech Challenge Robotics Team Mentor}{Waldorf School of the Peninsula, Mountain View, CA}{Oct 2017 -- Feb 2018}{Mentored high school students in the robotic club to build a robot controller to compete in FIRST Tech Challenge robot competition in Java.}
+  % \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
+
